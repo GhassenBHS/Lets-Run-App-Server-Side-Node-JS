@@ -26,30 +26,204 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', rout);
 app.use('/users', users);
 app.post('/joggingApp/settings/update', function(request, response) {
+
         firebaseConnect.update_settings(request, response);
 
 
-
     }
 );
-app.post('/joggingApp/settings/update_token', function(request, response) {
-        firebaseConnect.update_token(request, response);
 
-
-
-    }
-);
 
 app.post('/joggingApp/notify/:facebook_id', function(request, response) {
-        firebaseConnect.notify(request, response);
+
+
+    firebaseConnect.user_exists(request.params.facebook_id,function (res,err) {
+        if (err)
+        {
+            console.log("Error Occurred") ;
+        }
+        else {
+            if (res)
+            {
+                firebaseConnect.notify(request, response);
+            }
+            else {
+                response.writeHead(404,
+                    {'Content-Type': 'text/plain'});
+                response.end("User Not found") ;
+            }
+        }
+
+    }) ;
+
+
+
+
     }
 );
 app.post('/joggingApp/join_session/:facebook_id', function(request, response) {
-        firebaseConnect.join_session(request, response);
+
+
+
+    firebaseConnect.user_exists(request.params.facebook_id,function (res,err) {
+        if (err)
+        {
+            console.log("Error Occurred") ;
+        }
+        else {
+            if (res)
+            {
+                firebaseConnect.join_session(request, response);
+            }
+            else {
+                response.writeHead(404,
+                    {'Content-Type': 'text/plain'});
+                response.end("User Not found") ;
+            }
+        }
+
+    }) ;
+
+
+    }
+);
+app.post('/joggingApp/quit_session/:facebook_id', function(request, response) {
+
+
+    firebaseConnect.user_exists(request.params.facebook_id,function (res,err) {
+        if (err)
+        {
+            console.log("Error Occurred") ;
+        }
+        else {
+            if (res)
+            {
+                firebaseConnect.quit_session(request, response);
+            }
+            else {
+                response.writeHead(404,
+                    {'Content-Type': 'text/plain'});
+                response.end("User Not found") ;
+            }
+        }
+
+    }) ;
+
+
+
     }
 );
 app.get('/joggingApp/get_sessions_list/:facebook_id', function(request, response) {
-        firebaseConnect.get_sessions_list(request, response);
+
+
+    firebaseConnect.user_exists(request.params.facebook_id,function (res,err) {
+        if (err)
+        {
+            console.log("Error Occurred") ;
+        }
+        else {
+            if (res)
+            {
+                firebaseConnect.get_sessions_list(request, response);
+
+            }
+            else {
+                response.writeHead(404,
+                    {'Content-Type': 'text/plain'});
+                response.end("User Not found") ;
+            }
+        }
+
+    }) ;
+
+
+
+
+
+
+
+    }
+);
+app.get('/joggingApp/get_user_sessions_list/:facebook_id', function(request, response) {
+
+
+    firebaseConnect.user_exists(request.params.facebook_id,function (res,err) {
+        if (err)
+        {
+            console.log("Error Occurred") ;
+        }
+        else {
+            if (res)
+            {
+                firebaseConnect.get_user_sessions_list(request, response);
+
+            }
+            else {
+                response.writeHead(404,
+                    {'Content-Type': 'text/plain'});
+                response.end("User Not found") ;
+            }
+        }
+
+    }) ;
+
+
+
+
+    }
+);
+app.get('/joggingApp/get_recent_sessions_list/:facebook_id', function(request, response) {
+
+
+
+
+    firebaseConnect.user_exists(request.params.facebook_id,function (res,err) {
+        if (err)
+        {
+            console.log("Error Occurred") ;
+        }
+        else {
+            if (res)
+            {
+                firebaseConnect.get_recent_sessions_list(request, response);
+            }
+            else {
+                response.writeHead(404,
+                    {'Content-Type': 'text/plain'});
+                response.end("User Not found") ;
+            }
+        }
+
+    }) ;
+
+
+
+
+    }
+);
+app.post('/joggingApp/get_joiners_list/:facebook_id', function(request, response) {
+
+
+
+    firebaseConnect.user_exists(request.params.facebook_id,function (res,err) {
+        if (err)
+        {
+            console.log("Error Occurred") ;
+        }
+        else {
+            if (res)
+            {
+                firebaseConnect.get_joiners_list(request, response);
+            }
+            else {
+                response.writeHead(404,
+                    {'Content-Type': 'text/plain'});
+                response.end("User Not found") ;
+            }
+        }
+
+    }) ;
+
 
 
 
@@ -58,9 +232,62 @@ app.get('/joggingApp/get_sessions_list/:facebook_id', function(request, response
 );
 
 app.post('/joggingApp/get_session_details/:facebook_id', function(request, response) {
-        firebaseConnect.get_session_details(request, response);
+
+
+
+
+        firebaseConnect.user_exists(request.params.facebook_id,function (res,err) {
+            if (err)
+            {
+                console.log("Error Occurred") ;
+            }
+            else {
+                if (res)
+                {
+                    firebaseConnect.get_session_details(request, response);                }
+                else {
+                    response.writeHead(404,
+                        {'Content-Type': 'text/plain'});
+                    response.end("User Not found") ;
+                }
+            }
+
+        }) ;
+
+
+
 }
 );
+app.post('/joggingApp/delete_session/:facebook_id', function(request, response) {
+
+
+    firebaseConnect.user_exists(request.params.facebook_id,function (res,err) {
+        if (err)
+        {
+            console.log("Error Occurred") ;
+        }
+        else {
+            if (res)
+            {
+                firebaseConnect.delete_session(request, response);
+            }
+            else {
+                response.writeHead(404,
+                    {'Content-Type': 'text/plain'});
+                response.end("User Not found") ;
+            }
+        }
+
+    }) ;
+
+
+
+
+
+    }
+);
+
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

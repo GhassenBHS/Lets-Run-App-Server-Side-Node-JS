@@ -1,12 +1,11 @@
 {
   "type": "service_account",
   "project_id": "jogging-app",
-  "private_key_id": "46204fec7650262298c9823aa81094d2958e4139",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCjCgQAnE3CFbgc\nDMVftLys/txiU5AactHwhYnerzZEYyFd/OB5qMVEQkpuiQuSBea1oMfDluGtDEga\nzhxsBBzpM7YpHw1Aw5LnmG1GurGCKnkbfqwpXiCMsC4rs5gFGAZAOg0abVCT+nit\naGRPxVAsdsuCLhtOBp/e+fHgMaU0G/NYk+Ioa9a421AsWN768rPYzuF/i4XVMT2a\nSdhMJ6v+QYU3QWYLZmsbGbIreAbjfjxz60EOQ8Mt9X9oTM74uoKBKpm2pnCgGvcZ\nuYnGzi/6UGvQLuhJM2i2IZWatHrPaOuLZPx21MJPebRNtpJBuAHrBBv9Vh3xafuV\nZ3hZuD1FAgMBAAECggEANK7S1kOrmLCd+mpiCOgFI72DBz7LTNCXaCouf8eMOJLz\nwEQrYQSZIdJt7MPZ+khv4XbftiL2L43NauP5KSo3EWAFV8pR5QCNYsrNXNKM82u4\nEJthFEj3KZ7wfGyfDd5SfsSDYWu7YuXHwvj9mQ1AN+33Gsy9Q/w+ArYvY2uHX4u2\nuvoNPuHSsGajX1BXiZds550uAdYe4t3PEy0Du5I5vRo99aVfH6zsuYyo0178FDw9\nR/kvUY3gWknK6028MTBtiyKc50927NTV9O0KZeN+RS4QTMqOL3E4lzb2xAp09aLK\npND1v7qKiAr4gI1ENO5CtrdoJq7h4AGfhGf71nK5QQKBgQDxVqTg7EbaN+tGh1J6\nPPNktiUiTiKuLERyoMyHY6SBGjFyGEL3YGtwxKFdJnAgMXbHHbuca5KdW+hQPeRo\nxe7bTR42WTsvhWKcjMM9Cr0PyCdxTu7WCmM67ytcEpdh8KatHEmwDfrJyLgYG1hB\nJUn28Z5YH/DbBeY8Dj6DLECZEQKBgQCs8aQNirtG3rRxlTdwT89urI56xXso9Kz9\ncdF3PwTQWwCsTxo6C7NZIXgS3tt+jLIbT3WPWcVyEsWkN+Dwy4PmBVkpi899cnAU\nIBq7F5pdlfKDfpewi6GZ4VIAY44Z67VqHWSACBdE1acFUBKoRHMTde7EQz3SWjdE\n+TjKc4nA9QKBgQC4ffgFShrP7zeY7xIKCFY4g1XX58tzQrwAtRQl2/KCDzgFdK6c\n1cTMrER/JUdKFQYsKXqmlUW7rermjKnzvnxegZG7EnPAXEOKUcFfBLqLOgONBz5l\nugMppnSLKls3r/R7GcjrIYS6hQrWwvCwvITSltrpm2FQzi23c1wugsHPQQKBgQCE\noI9R/0ldsR6qWGd6jwoh8t0VU+r+Xp1ng+jCTSbQ7mkWu1b+msiAmwUtW5DyfM19\n2jLqq0qbD8BYDq5Hm5tcRE+7Z8fIiYFgPbqiLhiomnyv0N5deseEbeJn//ES+ctX\nRJE1Cn9lv39luKGGP3AMxY1FH9gCQENQdtvRjkdfHQKBgErDFg8S2+8gnaO9vLgG\nfpg3s4UPw9Y1RAWvELkCY0H2aV6zDkHeNxfv8UkleO3DLZ4mmjS+heKD1ZVZIAjs\n0fN1CmvM153MamqJLP9K1AMyPgjiMX7O6aCMHo7tKvkelKPliH+1r6gE0NCa3591\n6ZooYIPEMB1BbxsrFeewRP51\n-----END PRIVATE KEY-----\n",
-  "client_email": "joggingapp@jogging-app.iam.gserviceaccount.com",
-  "client_id": "104475415285388135945",
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://accounts.google.com/o/oauth2/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/joggingapp%40jogging-app.iam.gserviceaccount.com"
+  "private_key_id": "",
+  "private_key": ""
+  "client_id": "",
+  "auth_uri": "",
+  "token_uri": "",
+  "auth_provider_x509_cert_url": "",
+  "client_x509_cert_url": ""
 }
